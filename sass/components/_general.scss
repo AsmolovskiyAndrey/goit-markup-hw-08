@@ -1,0 +1,43 @@
+.body {
+    font-family: 'Roboto', sans-serif;
+    background-color: $text-bgc-color;
+    color: $text-firstly-color;
+    letter-spacing: 0.03em;
+    font-size: 14px;
+    line-height: 1.15;
+    padding-top: 80px;
+    /* gap узнать */
+}
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+    /* outline: 2px solid tomato; */
+}
+
+/* Установка отступов для секций Padding */
+.section {
+    padding: 94px 15px;
+}
+/* невидимые заголовки */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+h1, h2, h3, p, ul {
+    margin: 0;
+}

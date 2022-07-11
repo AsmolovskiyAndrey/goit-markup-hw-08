@@ -1,0 +1,276 @@
+/* HERO INDEX*/
+.hero {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/bgimage/hero.jpg);
+    background-color: $dark-bgc;
+    max-width: 1600px;
+    height: 600px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.hero__title {
+    max-width: 696px;
+    margin: 0 auto 30px auto;
+
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.37;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $text-bgc-color;
+}
+
+.hero__button {
+    font-family: inherit;
+    color: $text-bgc-color;
+    background-color: $text-secondary-color;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    display: inline-block;
+    min-width: 200px;
+    min-height: 50px;
+    border-radius: 4px;
+    border: transparent;
+    text-align: center;
+    padding: 10px 32px;
+
+    transition: background-color $animation;
+    border-color: $animation;
+
+    &:hover {
+    background-color: $bgc-button-color;
+    transform: scale(1.03);
+    }
+}
+
+.hero-backdrop {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: translate $animation,
+        opacity $animation;
+
+    background-color: $bg-color-backdrop;
+}
+
+.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.hero-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 528px;
+    min-height: 581px;
+
+    background: $text-bgc-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+.hero-modal__button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    fill: $logo-text-color;
+    background: $text-bgc-color;
+    @include border();
+    border-radius: 50%;
+
+    transition: fill $animation;
+}
+
+.hero-modal__close {
+    width: 11px;
+    height: 11px;
+
+    &:hover,
+    &:focus {
+    fill: $text-secondary-color;
+    }
+}
+
+/* Hero-form */
+.hero-form {
+    display: flex;
+    flex-direction: column;
+
+    padding: 40px;
+    text-align: left;
+}
+
+.hero-form__title {
+    margin-bottom: 12px;
+
+    font-weight: 700;
+    font-size: 20px;
+    color: $title-main-color;
+}
+
+.hero-form__box {
+    min-width: 448px;
+    min-height: 342px;
+    margin-bottom: 20px;
+}
+
+.hero-form__list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-form__field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.hero-form__label {
+    font-size: 12px;
+    letter-spacing: 0.01em;
+    color: $text-firstly-color;
+}
+
+.hero-form__input {
+    width: 448px;
+    height: 40px;
+    padding-left: 42px;
+    @include border(rgba(33, 33, 33, 0.2));
+    border-radius: 4px;
+
+    transition: border $animation;
+
+    &:focus {
+    border-color: $text-secondary-color;
+    outline: none;
+    }
+
+    &:focus ~ .hero-form__svg {
+    fill: $text-secondary-color;
+    }
+}
+.hero-form__label {
+    margin-bottom: 4px;
+}
+
+.hero-form__comment {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-form__svg {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    fill: $title-main-color;
+
+    transition: fill $animation;
+}
+
+.hero-form__textarea {
+    width: 448px;
+    height: 120px;
+    padding: 12px 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+
+    transition: border $animation;
+
+    &:focus {
+    border-color: $text-secondary-color;
+    outline: none;
+    }
+
+    &::placeholder {
+    color: $color-place-holder;
+    }
+}
+.hero-form__privat {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+
+    line-height: 1.71;
+}
+
+.hero-form__check {
+    margin-right: 8px;
+}
+
+.hero-form__check[type='checkbox'] {
+    appearance: none;
+}
+
+.hero-form__icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid $title-main-color;
+    border-radius: 2px;
+    margin-right: 7px;
+}
+
+.hero-form__check:checked~.hero-form__icon {
+    border-color: transparent;
+    background-color: $text-secondary-color;
+    background-image: url(../images/svg-index/icon-check.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-origin: border-box;
+}
+
+.hero-form__button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    width: 200px;
+    height: 50px;
+    background: $text-secondary-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border: none;
+
+    transition: background-color $animation;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: $text-bgc-color;
+
+    &:hover,
+    &:focus {
+    background-color: $bgc-button-color;
+    }
+}
+
+.hero-form__link {
+    line-height: 1.71;
+    color: $text-secondary-color;
+}

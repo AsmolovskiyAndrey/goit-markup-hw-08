@@ -1,0 +1,48 @@
+/* WORKING INDEX*/
+.working {
+    padding-top: 0;
+}
+
+.working__list {
+    display: flex;
+}
+
+.working__li {
+    position: relative;
+
+    &:not(:last-child) {
+    margin-right: 30px;
+    }
+}
+
+.working__box {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(47, 48, 58, 0.8);
+}
+
+.working__text-overlay {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $text-bgc-color;
+    z-index: 2;
+}
+
+.working__title,
+.team__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    color: $title-main-color;
+    text-align: center;
+    margin-bottom: 50px;
+}

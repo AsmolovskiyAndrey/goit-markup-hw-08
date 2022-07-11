@@ -1,0 +1,9 @@
+/* Убрал точки со списков ul */
+%list {
+    list-style: none;
+    padding: 0;
+}
+/* Убрал подчёркивание со ссылок */
+%link {
+    text-decoration: none;
+}

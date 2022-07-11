@@ -1,0 +1,41 @@
+/* BENEFITS INDEX*/
+.benefits {
+    @extend %list;
+    display: flex;
+}
+
+.benefits__li {
+    width: 270px;
+
+    &:not(:last-child) {
+    margin-right: 30px;
+    }
+}
+
+.benefits__bg {
+    height: 120px;
+    width: 270px;
+    margin-bottom: 30px;
+    background-color: $light-bgc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.benefits__icon {
+    width: 70px;
+    height: 70px;
+}
+
+.benefits__title {
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $title-main-color;
+}
+
+.benefits__text {
+    line-height: 1.7;
+}

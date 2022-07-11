@@ -1,0 +1,240 @@
+ /* FOOTER */
+.footer {
+    background-color: $dark-bgc;
+    padding: 60px 0;
+}
+
+.footer__main {
+    display: flex;
+}
+
+.footer__logo {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.footer__list {
+    @extend %list;
+    font-style: inherit;
+}
+
+.footer__sity {
+    line-height: 1.7;
+    color: $text-bgc-color;
+}
+
+.footer__adress {
+    display: flex;
+    flex-direction: column;
+    min-width: 231px;
+    margin-right: 70px;
+}
+
+.footer__link {
+    display: block;
+    margin-top: 9px;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: $adress-capacity;
+
+    transition: color $animation;
+
+    &:hover,
+    &:focus {
+    color: $text-secondary-color;
+    }
+}
+
+/* footer-social */
+.footer-social {
+    @extend %list;
+    display: flex;
+    flex-direction: column;
+    margin-top: 12px;
+    margin-right: 93px;
+}
+
+.footer-social__title {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $text-bgc-color;
+    margin-bottom: 20px;
+}
+
+.footer-social__list {
+    display: flex;
+    padding: 0;
+}
+
+.footer-social__li{
+    @extend %list;
+}
+
+.footer-social__li:not(:last-child) {
+    margin-right: 10px;
+}
+
+.footer-social__link {
+    @extend %link;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $text-bgc-color;
+    background-color: $bg-social-footer;
+    border-radius: 50%;
+
+    transition-property: background-color, color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+    background-color: $text-secondary-color;
+    }
+}
+
+.footer-social__icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+/* footer form */
+.footer-form {
+    min-width: 570px;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-form__title {
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $text-bgc-color;
+}
+
+.footer-form__field {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-form__mail {
+    position: relative;
+    margin-right: 12px;
+}
+
+.footer-form__input,
+.footer-form__label {
+    font-size: 16px;
+    line-height: 1.25;
+    background-color: inherit;
+    color: $adress-capacity;
+}
+.footer-form__label {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    transition: transform $animation;
+}
+.footer-form__input::placeholder {
+    opacity: 0;
+    transition: opacity $animation;
+}
+.footer-form__input {
+    width: 358px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    @include border($border-footer);
+    filter: drop-shadow(0px 4px 4px $shadow);
+    border-radius: 4px;
+    padding: 15px 30px 15px 16px;
+
+    &:focus+.footer-form__label,
+    &:not(:placeholder-shown)+.footer-form__label {
+    transform: translateY(-46px);
+    }
+
+    &:focus {
+    outline: none;
+    }
+
+    &:focus::placeholder {
+    opacity: 1;
+    }
+
+    &:focus:valid ~ .footer-form__icon,
+    &:valid:not(:placeholder-shown)~.footer-form__icon{
+    fill: rgb(87, 208, 87);
+    }
+
+    &:focus:invalid ~.footer-form__icon {
+    fill: rgb(251, 251, 57);
+    }
+    &:focus:invalid ~.footer-form__warning {
+        opacity: 1;
+    }
+}
+
+.footer-form__warning{
+    display: flex;
+    max-width: 358px;
+    position: absolute;
+    padding: 5px;
+    color: rgb(251, 251, 57);
+    opacity: 0;
+    transition: opacity $animation;
+}
+.footer-form__icon{
+    display: flex;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+
+    fill: transparent;
+    transition: fill $animation;
+}
+
+/* footer-button */
+.footer-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 200px;
+    height: 50px;
+
+    background: #2196F3;
+    box-shadow: 0px 4px 4px $shadow;
+    border-radius: 4px;
+}
+
+.footer-button__text {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    color: $text-bgc-color;
+
+    margin-right: 10px;
+    padding: 0;
+    border: none;
+    background-color: inherit;
+}
+
+.footer-button__icon {
+    fill: $text-bgc-color;
+}
