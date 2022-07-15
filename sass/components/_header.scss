@@ -8,16 +8,17 @@
     top: 0;
     z-index: 9;
 
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
 
     // border-bottom: 1px solid $border-header;
     // background-color: $text-bgc-color;
 }
 
-// .header__flex {
-//     display: flex;
-// }
+.header__flex {
+    margin: 0;
+    // display: flex;
+}
 
 // .nav--flex {
 //     display: flex;
@@ -111,3 +112,30 @@
     color: $text-secondary-color;
     }
 }
+
+
+
+.nav-mobile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+}
+.icon-cross {
+    display: none;
+}
+.mobile-button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    &.is-open .icon-cross{
+        display: block;
+    }
+    &.is-open .icon-menu {
+        display: none;
+    }
+}
+

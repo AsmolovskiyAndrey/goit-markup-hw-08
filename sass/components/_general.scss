@@ -21,12 +21,15 @@
 
     @media screen and (min-width: $mobile) {
         width: $mobile;
+        // width: calc($mobile - 30px);
     }
     @media screen and (min-width: $tablet) {
         width: $tablet;
+        // width: calc($tablet - 30px);
     }
     @media screen and (min-width: $desctop) {
         width: $desctop;
+        // width: calc($desctop - 30px);
     }
 }
 
