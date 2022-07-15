@@ -5,23 +5,39 @@
     letter-spacing: 0.03em;
     font-size: 14px;
     line-height: 1.15;
-    padding-top: 80px;
-    /* gap узнать */
+    padding-top: 60px;
+    // на таблет и выше 80
     // @media (min-width: 800px) {
     // background-color: orange;
     // }
 }
 .container {
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
     /* outline: 2px solid tomato; */
+
+    @media screen and (min-width: $mobile) {
+        width: $mobile;
+    }
+    @media screen and (min-width: $tablet) {
+        width: $tablet;
+    }
+    @media screen and (min-width: $desctop) {
+        width: $desctop;
+    }
 }
+
+// $mobile: 480px;
+// $tablet: 768px;
+// $desctop: 1200px;
 
 /* Установка отступов для секций Padding */
 .section {
-    padding: 94px 15px;
+    padding: 60px 0;
+    // padding: 94px 15px;
 }
 /* невидимые заголовки */
 .visually-hidden {
@@ -36,11 +52,11 @@
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-}
+// img {
+//     display: block;
+//     max-width: 100%;
+//     height: auto;
+// }
 h1, h2, h3, p, ul {
     margin: 0;
 }

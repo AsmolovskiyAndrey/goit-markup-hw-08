@@ -1,32 +1,34 @@
 /* CLIENTS INDEX */
-.clients__title {
-    margin-bottom: 50px;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-    text-align: center;
-    color: $title-main-color;
-}
+// .clients__title {
+//     margin-bottom: 50px;
+//     font-weight: 700;
+//     font-size: 36px;
+//     line-height: 1.17;
+//     text-align: center;
+//     color: $title-main-color;
+// }
 
 .clients__list {
     @extend %list;
     display: flex;
 
-
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
 }
 .clients__li{
     @extend %list;
-    
-    &:not(:last-child) {
-            margin-right: 30px;
-        }
+    width: calc(100% / 2 - 15px);
+    // &:not(:last-child) {
+    //         margin-right: 30px;
+    //     }
 }
 
 .clients__link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 170px;
+
     height: 92px;
     color: $icon-social;
     @include border(#AFB1B8);

@@ -2,52 +2,59 @@
 .header {
     position: fixed;
     width: 100%;
-    min-height: 80px;
+    min-height: 60px;
+    background-color: #fff;
+    // 80 для таблет и выше
     top: 0;
     z-index: 9;
 
-    border-bottom: 1px solid $border-header;
-    background-color: $text-bgc-color;
-}
-
-.header__flex {
-    display: flex;
-}
-
-.nav--flex {
     display: flex;
     align-items: center;
+
+    // border-bottom: 1px solid $border-header;
+    // background-color: $text-bgc-color;
 }
+
+// .header__flex {
+//     display: flex;
+// }
+
+// .nav--flex {
+//     display: flex;
+//     align-items: center;
+// }
 
 /* nav */
 .nav-list {
-    @extend %list;
-    display: flex;
+    display: none;
+    // @extend %list;
+    // display: flex;
 }
 
 /* Применит отступ ко всем элементам кроме последнего */
-.nav-list__li:not(:last-child) {
-    margin-right: 50px;
-}
+// .nav-list__li:not(:last-child) {
+//     margin-right: 50px;
+// }
 
 .nav__link {
-    @extend %link;
-    position: relative;
+    display: none;
+    // @extend %link;
+    // position: relative;
 
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    // display: block;
+    // padding-top: 32px;
+    // padding-bottom: 32px;
 
-    font-weight: 500;
-    letter-spacing: 0.02em;
-    color: $title-main-color;
+    // font-weight: 500;
+    // letter-spacing: 0.02em;
+    // color: $title-main-color;
 
-    transition: color $animation;
+    // transition: color $animation;
 
-    &:hover,
-    &:focus {
-    color: $text-secondary-color;
-    }
+    // &:hover,
+    // &:focus {
+    // color: $text-secondary-color;
+    // }
 }
 .nav__link--active {
     color: $text-secondary-color;
@@ -67,9 +74,10 @@
 }
 /* adress header */
 .adress {
-    @extend %list;
-    display: flex;
-    margin-left: auto;
+        display: none;
+    // @extend %list;
+    // display: flex;
+    // margin-left: auto;
 }
 
 /* Применит отступ ко всем элементам кроме последнего */

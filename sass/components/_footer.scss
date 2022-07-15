@@ -2,11 +2,12 @@
 .footer {
     background-color: $dark-bgc;
     padding: 60px 0;
+    text-align: center;
 }
 
-.footer__main {
-    display: flex;
-}
+// .footer__main {
+//     display: flex;
+// }
 
 .footer__logo {
     display: block;
@@ -16,6 +17,7 @@
 .footer__list {
     @extend %list;
     font-style: inherit;
+    text-align: center;
 }
 
 .footer__sity {
@@ -26,13 +28,14 @@
 .footer__adress {
     display: flex;
     flex-direction: column;
-    min-width: 231px;
-    margin-right: 70px;
+    // min-width: 231px;
+    // margin-right: 70px;
+    align-items: center;
 }
 
 .footer__link {
     display: block;
-    margin-top: 9px;
+    margin-top: 8px;
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
@@ -45,17 +48,7 @@
     color: $text-secondary-color;
     }
 }
-
-/* footer-social */
-.footer-social {
-    @extend %list;
-    display: flex;
-    flex-direction: column;
-    margin-top: 12px;
-    margin-right: 93px;
-}
-
-.footer-social__title {
+.footer__title {
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
@@ -63,8 +56,19 @@
     margin-bottom: 20px;
 }
 
+/* footer-social */
+.footer-social {
+    @extend %list;
+    display: flex;
+    flex-direction: column;
+    margin: 60px 0;
+    // margin-top: 12px;
+    // margin-right: 93px;
+}
+
 .footer-social__list {
     display: flex;
+    justify-content: center;
     padding: 0;
 }
 
@@ -104,30 +108,27 @@
 }
 
 /* footer form */
-.footer-form {
-    min-width: 570px;
-    margin-top: 12px;
-    display: flex;
-    flex-direction: column;
-}
 
-.footer-form__title {
-    margin-bottom: 20px;
 
-    font-weight: 700;
-    font-size: 14px;
-    text-transform: uppercase;
-    color: $text-bgc-color;
-}
+// .footer-form {
+//     min-width: 570px;
+//     margin-top: 12px;
+//     display: flex;
+//     flex-direction: column;
+// }
+
 
 .footer-form__field {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-form__mail {
     position: relative;
-    margin-right: 12px;
+    width: 100%;
+    // margin-right: 12px;
+    margin-bottom: 20px;
 }
 
 .footer-form__input,
@@ -149,7 +150,8 @@
     transition: opacity $animation;
 }
 .footer-form__input {
-    width: 358px;
+    width: 100%;
+    // width: 358px;
     height: 50px;
     display: flex;
     flex-direction: row;
