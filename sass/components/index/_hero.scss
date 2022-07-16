@@ -70,6 +70,7 @@
         opacity $animation;
 
     background-color: $bg-color-backdrop;
+    overflow-y: scroll;
 }
 
 .is-hidden {

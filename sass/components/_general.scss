@@ -7,9 +7,11 @@
     line-height: 1.15;
     padding-top: 60px;
     // на таблет и выше 80
-    // @media (min-width: 800px) {
-    // background-color: orange;
-    // }
+
+    // не позволит скролить под ним когда открыта модалка
+    &.modal-open{
+        overflow: hidden;
+    }
 }
 .container {
     max-width: 1200px;
