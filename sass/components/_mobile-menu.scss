@@ -1,0 +1,142 @@
+// mobile
+
+
+.mobile {
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 60px;
+}
+
+.icon-cross {
+    display: none;
+}
+
+.mobile__icon:active,
+.mobile__icon:focus {
+    fill: rgba(33, 150, 243, 1);
+}
+
+.mobile__button {
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+
+    z-index: 100;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    &.is-open .icon-cross {
+        display: block;
+    }
+
+    &.is-open .icon-menu {
+        display: none;
+    }
+}
+
+
+// mobile-menu
+
+.mobile-menu {
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+
+    display: none;
+    background-color: $text-bgc-color;
+
+
+    &.is-open {
+        position: fixed;
+        // position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+        font-weight: 500;
+        letter-spacing: 0.02em;
+
+        padding: 48px 40px;
+    }
+}
+
+
+.mobile-menu__list,
+.mobile-menu__all-pages,
+.mobile-menu__social-list {
+    @extend %list;
+}
+
+.mobile-menu__link,
+.mobile-menu__phone,
+.mobile-menu__letter,
+.mobile-menu__social {
+    @extend %link;
+}
+
+.mobile-menu__all-pages {
+    margin-bottom: auto;
+}
+
+.mobile-menu__page:not(:last-child),
+.mobile-menu__contacts:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+.mobile-menu__link {
+    font-size: 40px;
+    line-height: 1.18;
+    color: $title-main-color;
+}
+
+.mobile-menu__link--active {
+    color: $text-secondary-color;
+}
+
+.mobile-menu__list {
+    margin-bottom: 64px;
+}
+
+.mobile-menu__phone {
+    font-size: 34px;
+    line-height: 1.18;
+    color: $text-secondary-color;
+}
+
+.mobile-menu__letter {
+    font-size: 24px;
+    line-height: 1.17;
+    color: $text-firstly-color;
+}
+
+.mobile-menu__social-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.mobile-menu__all-social {
+    font-size: 18px;
+    line-height: 1.22;
+
+    &:not(:last-child) {
+        padding-right: 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.2);
+    }
+}
+
+.mobile-menu__social {
+    color: $text-secondary-color;
+}

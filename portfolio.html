@@ -22,72 +22,110 @@
     <!-- Хедер -->
     <header class="header">
       <div class="container header__flex">
+        <a class="logo logo--posision" href="./index.html"
+          ><span class="logo__one">Web</span
+          ><span class="logo__two">Studio</span></a
+        >
         <nav class="nav nav--flex">
-          <div class="mobile">
-            <a class="logo logo--posision" href="./index.html"
-              ><span class="logo__one">Web</span
-              ><span class="logo__two">Studio</span></a
-            >
-            <button
-              class="mobile__button"
-              data-menu-button
-              type="button"
-              aria-expanded="false"
-            >
-              <svg
-                class="mobile__icon"
-                width="40"
-                height="40"
-                aria-label="переключатель для мобильного меню"
+          <ul class="nav-list">
+            <li class="nav-list__li">
+              <a class="nav__link nav__link--active" href="./index.html"
+                >Студия</a
               >
-                <use
-                  class="icon-menu"
-                  href="./images/svg-index/mobile-menu.svg#icon-menu"
-                ></use>
-                <use
-                  class="icon-cross"
-                  href="./images/svg-index/mobile-menu.svg#icon-cross"
-                ></use>
-              </svg>
-            </button>
-            <div class="mobile__menu" data-menu>
-              <ul class="nav-list">
-                <li class="nav-list__li">
-                  <a class="nav__link nav__link--active" href="./index.html"
-                    >Студия</a
-                  >
-                </li>
-                <li class="nav-list__li">
-                  <a class="nav__link" href="./portfolio.html">Портфолио</a>
-                </li>
-                <li class="nav-list__li">
-                  <a class="nav__link" href="./contacts.html">Контакты</a>
-                </li>
-              </ul>
-              <ul class="adress">
-                <li class="adress__list">
-                  <a
-                    class="adress__link letter"
-                    href="mailto:info@devstudio.com"
-                  >
-                    <svg class="adress__icon">
-                      <use href="./images/svg-index/icons.svg#icon-mail"></use>
-                    </svg>
-                    info@devstudio.com</a
-                  >
-                </li>
-                <li class="li">
-                  <a class="adress__link phone" href="tel:+380961111111">
-                    <svg class="adress__icon">
-                      <use href="./images/svg-index/icons.svg#icon-phone"></use>
-                    </svg>
-                    +38 096 111 11 11</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
+            </li>
+            <li class="nav-list__li">
+              <a class="nav__link" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="nav-list__li">
+              <a class="nav__link" href="./contacts.html">Контакты</a>
+            </li>
+          </ul>
+          <ul class="adress">
+            <li class="adress__list">
+              <a class="adress__link letter" href="mailto:info@devstudio.com">
+                <svg class="adress__icon">
+                  <use href="./images/svg-index/icons.svg#icon-mail"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="li">
+              <a class="adress__link phone" href="tel:+380961111111">
+                <svg class="adress__icon">
+                  <use href="./images/svg-index/icons.svg#icon-phone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+          </ul>
         </nav>
+        <div class="mobile">
+          <button
+            class="mobile__button"
+            data-menu-button
+            type="button"
+            aria-expanded="false"
+          >
+            <svg
+              class="mobile__icon"
+              width="40"
+              height="40"
+              aria-label="переключатель для мобильного меню"
+            >
+              <use
+                class="icon-menu"
+                href="./images/svg-index/mobile-menu.svg#icon-menu"
+              ></use>
+              <use
+                class="icon-cross"
+                href="./images/svg-index/mobile-menu.svg#icon-cross"
+              ></use>
+            </svg>
+          </button>
+          <div class="mobile-menu" data-menu>
+            <ul class="mobile-menu__all-pages">
+              <li class="mobile-menu__page">
+                <a class="mobile-menu__link" href="./index.html">Студия</a>
+              </li>
+              <li class="mobile-menu__page">
+                <a
+                  class="mobile-menu__link mobile-menu__link--active"
+                  href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mobile-menu__page">
+                <a class="mobile-menu__link" href="./contacts.html">Контакты</a>
+              </li>
+            </ul>
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__contacts">
+                <a class="mobile-menu__phone" href="tel:+380961111111">
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-menu__contacts">
+                <a class="mobile-menu__letter" href="mailto:info@devstudio.com">
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-menu__social-list">
+              <li class="mobile-menu__all-social">
+                <a class="mobile-menu__social" href="">Instagram</a>
+              </li>
+              <li class="mobile-menu__all-social">
+                <a class="mobile-menu__social" href="">Twitter</a>
+              </li>
+              <li class="mobile-menu__all-social">
+                <a class="mobile-menu__social" href="">Facebook</a>
+              </li>
+              <li class="mobile-menu__all-social">
+                <a class="mobile-menu__social" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <!-- Фильтр -->
@@ -124,6 +162,7 @@
               <a class="projects__link" href="">
                 <div class="projects__box">
                   <img
+                    class="projects__img"
                     src="./images/portfolio-projects/portfolio-1.jpg"
                     alt="Технокряк"
                     width="370"
@@ -148,6 +187,7 @@
               <a class="projects__link" href="">
                 <div class="projects__box">
                   <img
+                    class="projects__img"
                     src="./images/portfolio-projects/portfolio-2.jpg"
                     alt="Постер New Orlean vs Golden Star"
                     width="370"
@@ -174,6 +214,7 @@
               <a class="projects__link" href="">
                 <div class="projects__box">
                   <img
+                    class="projects__img"
                     src="./images/portfolio-projects/portfolio-3.jpg"
                     alt="Ресторан Seafood"
                     width="370"
@@ -198,6 +239,7 @@
               <a class="projects__link" href="">
                 <div class="projects__box">
                   <img
+                    class="projects__img"
                     src="./images/portfolio-projects/portfolio-4.jpg"
                     alt="Проект Prime"
                     width="370"
@@ -222,6 +264,7 @@
               <a class="projects__link" href="">
                 <div class="projects__box">
                   <img
+                    class="projects__img"
                     src="./images/portfolio-projects/portfolio-5.jpg"
                     alt="Проект Boxes"
                     width="370"
@@ -246,6 +289,7 @@
               <a class="projects__link" href="">
                 <div class="projects__box">
                   <img
+                    class="projects__img"
                     src="./images/portfolio-projects/portfolio-6.jpg"
                     alt="Inspiration has no Borders"
                     width="370"
@@ -270,6 +314,7 @@
               <a class="projects__link" href="">
                 <div class="projects__box">
                   <img
+                    class="projects__img"
                     src="./images/portfolio-projects/portfolio-7.jpg"
                     alt="Издание Limited Edition"
                     width="370"
@@ -294,6 +339,7 @@
               <a class="projects__link" href="">
                 <div class="projects__box">
                   <img
+                    class="projects__img"
                     src="./images/portfolio-projects/portfolio-8.jpg"
                     alt="Проект LAB"
                     width="370"
@@ -318,6 +364,7 @@
               <a class="projects__link" href="">
                 <div class="projects__box">
                   <img
+                    class="projects__img"
                     src="./images/portfolio-projects/portfolio-9.jpg"
                     alt="Growing Business"
                     width="370"
@@ -367,7 +414,7 @@
           </address>
         </div>
         <div class="footer-social">
-          <h2 class="footer-social__title">присоединяйтесь</h2>
+          <h2 class="footer__title">присоединяйтесь</h2>
           <ul class="footer-social__list">
             <li class="footer-social__li">
               <a class="footer-social__link" href="" aria-label="instagram">
@@ -400,7 +447,7 @@
           </ul>
         </div>
         <form class="footer-form">
-          <h2 class="footer-form__title">Подпишитесь на рассылку</h2>
+          <h2 class="footer__title">Подпишитесь на рассылку</h2>
           <div class="footer-form__field">
             <div class="footer-form__mail">
               <input
@@ -438,5 +485,6 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

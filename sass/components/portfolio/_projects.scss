@@ -11,12 +11,23 @@
 } */
 .projects__li {
     margin: 15px;
-    width: calc((100% - 90px) / $item);
+    
     background-color: $text-bgc-color;
 
     transition-property: border-color, box-shadow;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    width: 100%;
+    @media screen and (min-width: $mobile) {
+        width: $mobile;
+    }
+    @media screen and (min-width: $tablet) {
+        width: calc((100% - 60px) / 2);
+    }
+    @media screen and (min-width: $desctop) {
+        width: calc((100% - 90px) / $item);
+    }
 
     &:hover,
     &:focus {
@@ -37,6 +48,11 @@
     position: relative;
     overflow: hidden;
 }
+.projects__img{
+    width: 100%;
+    height: 294px;
+    background-size: cover;
+}
 
 .projects__overlay {
     position: absolute;
@@ -56,7 +72,18 @@
     line-height: 1.56;
     color: $text-bgc-color;
     background-color: $overlay-text;
+
+    @media screen and (min-width: $mobile) {
+    padding: 77px 24px;
+    }
+
+    // @media screen and (min-width: $tablet) {
+    // padding: 77px 24px;
+    // }
+
+    @media screen and (min-width: $desctop) {
     padding: 63px 24px;
+    }
 }
 
 .projects__cont {
