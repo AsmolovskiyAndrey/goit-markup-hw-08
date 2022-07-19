@@ -20,3 +20,11 @@
 .logo__three {
     color: $text-bgc-color;
 }
+
+.logo--posision{
+    margin-right: 88px;
+
+    @media screen and (min-width: $desctop) {
+        margin-right: 93px;
+    }
+}
