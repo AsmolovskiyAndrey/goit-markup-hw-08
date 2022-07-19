@@ -19,8 +19,11 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     margin-bottom: 50px;
-
     gap: 8px;
+
+    @media screen and (min-width: $tablet) {
+        justify-content: center;
+    }
 }
 
 .filter__li{

@@ -42,7 +42,10 @@
 /* Установка отступов для секций Padding */
 .section {
     padding: 60px 0;
-    // padding: 94px 15px;
+
+    @media screen and (min-width: $desctop) {
+        padding: 94px 0;
+    }
 }
 /* невидимые заголовки */
 .visually-hidden {
