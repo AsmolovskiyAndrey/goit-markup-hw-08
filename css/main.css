@@ -8,7 +8,7 @@
 }
 
 /* Убрал подчёркивание со ссылок */
-.projects__link, .footer-social__link, .team-social__link, .adress__link, .nav__link, .mobile-menu__link,
+.projects__link, .footer-social__link, .footer__link, .team-social__link, .adress__link, .nav__link, .mobile-menu__link,
 .mobile-menu__phone,
 .mobile-menu__letter,
 .mobile-menu__social, .logo {
