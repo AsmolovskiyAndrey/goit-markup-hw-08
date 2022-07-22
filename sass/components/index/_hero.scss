@@ -61,7 +61,7 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
         .hero {
-            background-image: $lg, url('/images/hero_all/hero_desctop/hero_desctop@2x.jpg');
+            background-image: $lg, url('../images/hero_all/hero_desctop/hero_desctop@2x.jpg');
         }
     }
 
