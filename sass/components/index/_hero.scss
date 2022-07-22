@@ -55,6 +55,9 @@
 @media screen and(min-width: $desctop) {
     .hero {
         background-image: $lg, url('../images/hero_all/hero_desctop/hero_desctop.jpg');
+        height: 38vw;
+        display: flex;
+        align-items: center;
     }
 
     @media (min-device-pixel-ratio: 2),
