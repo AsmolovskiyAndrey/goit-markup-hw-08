@@ -6,12 +6,6 @@
     font-size: 14px;
     line-height: 1.15;
     padding-top: 60px;
-    // на таблет и выше 80
-
-    // не позволит скролить под ним когда открыта модалка
-    &.modal-open{
-        overflow: hidden;
-    }
 }
 .container {
     max-width: 1200px;
@@ -19,7 +13,7 @@
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
-    /* outline: 2px solid tomato; */
+    // outline: 2px solid red;
 
     @media screen and (min-width: $mobile) {
         width: $mobile;
